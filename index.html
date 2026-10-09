@@ -1,0 +1,147 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de senha</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section class="conteudo">
+        <div class="conteudo-titulo">
+           <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadeado Azul, Amarelo e Verde</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #121212; /* Fundo escuro */
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    /* Estilização do SVG */
+    .lock-svg {
+      width: 200px;
+      height: 280px;
+      filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.5));
+      transition: transform 0.3s ease;
+    }
+
+    .lock-svg:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <svg class="lock-svg" viewBox="0 0 100 140" xmlns="http://www.w3.org/2000/svg">
+      <!-- Definição dos Gradientes de Cores -->
+      <defs>
+        <!-- Arco do cadeado: Azul -->
+        <linearGradient id="shackleGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#0052B4" />
+          <stop offset="100%" stop-color="#2A75D3" />
+        </linearGradient>
+
+        <!-- Corpo do cadeado: Verde para Amarelo -->
+        <linearGradient id="bodyGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#009B3A" />
+          <stop offset="50%" stop-color="#007A2D" />
+          <stop offset="100%" stop-color="#FEDF00" />
+        </linearGradient>
+      </defs>
+
+      <!-- Haste / Arco do Cadeado (Azul) -->
+      <path d="M 30 50 
+               V 30 
+               A 20 20 0 0 1 70 30 
+               V 50" 
+            fill="none" 
+            stroke="url(#shackleGradient)" 
+            stroke-width="12" 
+            stroke-linecap="round" />
+
+      <!-- Corpo Principal do Cadeado (Verde e Amarelo) -->
+      <rect x="15" y="48" width="70" height="75" rx="12" fill="url(#bodyGradient)" />
+
+      <!-- Detalhe/Faixa Amarela no centro -->
+      <path d="M 15 80 L 85 80 L 85 95 L 15 95 Z" fill="#FEDF00" opacity="0.9" />
+
+      <!-- Furo da Fechadura (Azul Escuro) -->
+      <circle cx="50" cy="72" r="6" fill="#002752" />
+      <polygon points="46,74 54,74 52,88 48,88" fill="#002752" />
+    </svg>
+  </div>
+
+</body>
+</html>
+            <h2 class="titulo-principal">Gerador de senhas</h2>
+            <h3 class="titulo-secundario">Gere instantaneamente uma senha aleatória e segura</h3>
+        </div>
+        <div class="conteudo-senha">
+            <label for="senha">Senha</label>
+            <input name="senha" type="text" id="campo-senha" readonly>
+        </div>
+        <div class="parametro">
+            <h3 class="parametro-titulo">Personalize sua senha</h3>
+            <div class="parametro-coluna__senha">
+                <div class="parametro-senha">
+                    <h4 class="parametro-senha__titulo">Número de caracteres</h4>
+                    <div class="parametro-senha-botoes">
+                        <button class="parametro-senha__botao">-</button>
+                        <p class="parametro-senha__texto">12</p>
+                        <button class="parametro-senha__botao">+</button>
+                    </div>
+                </div>
+                <div class="parametro-senha">
+                    <h4 class="parametro-senha__titulo">Características da senha</h4>
+                    <div class="parametro-senha-checkbox">
+                        <input name="maiusculo" type="checkbox" class="checkbox" checked>
+                        <label for="maiusculo">Letras maiúsculas</label>
+                    </div>
+                    <div class="parametro-senha-checkbox">
+                        <input name="minusculo" type="checkbox" class="checkbox">
+                        <label for="minusculo">Letras minúsculas</label>
+                    </div>
+                    <div class="parametro-senha-checkbox">
+                        <input name="numero" type="checkbox" class="checkbox">
+                        <label for="numero">Números</label>
+                    </div>
+                    <div class="parametro-senha-checkbox">
+                        <input name="simbolo" type="checkbox" class="checkbox">
+                        <label for="simbolo">Símbolos</label>
+                    </div>
+                </div>
+                <div class="parametro-senha">
+                    <h4 class="parametro-senha__titulo">Força da senha</h4>
+                    <div class="barra"></div>
+                    <div class="forca fraca"></div>
+                    <div class="parametro-senha-textos">
+                        <p>Fraca</p>
+                        <p>Média</p>
+                        <p>Forte</p>
+                    </div>
+                    <p class="entropia"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="main.js"></script>
+</body>
+
+</html>
